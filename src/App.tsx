@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+
+import WeatherPage from './pages/WeatherPage/WeatherPage';
 
 const App: React.FC = () => {
+
   return (
-    <div>
-      <h1>Hello</h1>
+    <div className='app'>
+      <WeatherPage />
     </div>
   )
 }
