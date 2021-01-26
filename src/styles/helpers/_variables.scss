@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 
-$main-color: rgb(42, 42, 211);
+$base-font-size: 16px;
+$small-font-size: 14px;
+$medium-font-size: 20px;
+$big-font-size: 32px;
 
-$main-font: "Roboto", sans-serif;
+$font-family: "Roboto", sans-serif;
+
+$color-primary: rgb(42, 42, 211);
+
+$main-spacing: 20px;
+$max-width: 1200px;
+
+$breakpoints: (
+  mobile: 480px,
+  tablets: 768px,
+  desktop: 1024px,
+);

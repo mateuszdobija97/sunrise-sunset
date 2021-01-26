@@ -1,17 +1,5 @@
-html {
-  font-size: 10px;
-  background-color: #fff;
-  font-family: $main-font;
-}
-
-* *:before *:after {
-  box-sizing: inherit;
-}
-
 .app {
-  overflow: auto;
-  width: 100%;
-  max-width: 1200px;
+  overflow: inherit;
+  max-width: $max-width;
   margin: 0 auto;
-  padding: 0 20px;
 }

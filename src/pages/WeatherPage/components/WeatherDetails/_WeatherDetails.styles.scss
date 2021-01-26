@@ -1,12 +1,12 @@
 .weather-page__details {
   height: 90%;
   max-height: 700px;
-  width: 50%;
+  width: 90%;
   max-width: 600px;
   text-align: center;
   background-image: linear-gradient(
-    darken($main-color, 5%),
-    lighten($main-color, 5%)
+    darken($color-primary, 5%),
+    lighten($color-primary, 5%)
   );
   border-radius: 10px;
   color: #fff;
@@ -14,47 +14,58 @@
 
 .weather-page {
   &__location {
-    padding: 30px 10px;
-    font-size: 2.5rem;
+    padding: 20px 0;
     i {
       padding-right: 10px;
     }
     p {
       display: inline-block;
     }
+    @media screen and (min-width: map-get($breakpoints, tablets)) {
+      padding: $main-spacing * 2 0;
+      font-size: $medium-font-size;
+    }
   }
 
   &__date {
-    font-size: 1.5rem;
-    padding-bottom: 10px;
     border-bottom: 1px solid #fff;
-    width: 50%;
-    margin: 0 auto;
+    width: 80%;
+    padding-bottom: 10px;
+    margin: 0 auto $main-spacing * 5;
+    @media screen and (min-width: map-get($breakpoints, tablets)) {
+      font-size: $medium-font-size;
+      padding-bottom: $main-spacing * 2;
+      margin-bottom: $main-spacing * 3;
+    }
   }
 
   &__main-desc {
-    font-size: 3rem;
-    padding: 80px 10px 50px;
+    font-size: $medium-font-size;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 4px;
+    @media screen and (min-width: map-get($breakpoints, tablets)) {
+      font-size: $big-font-size;
+    }
   }
 
   &__main-temp {
-    font-size: 8rem;
+    font-size: $big-font-size * 2;
+    padding: 20px 0;
     border: 1px solid white;
     border-radius: 0 0 10px 10px;
     border-top: none;
-    margin: 0 auto;
-    width: 50%;
+    margin: 50px auto 20px;
+    width: 80%;
     text-align: center;
+    @media screen and (min-width: map-get($breakpoints, tablets)) {
+      font-size: $big-font-size * 3;
+    }
   }
 
   &__temp {
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
-    font-size: 2rem;
-    padding: 20px 10px 60px;
     border-bottom: 1px solid #fff;
     p {
       display: inline-block;
@@ -62,14 +73,25 @@
     i {
       padding: 0 10px;
     }
+    @media screen and (min-width: map-get($breakpoints, tablets)) {
+      font-size: $medium-font-size;
+      padding-top: $main-spacing;
+    }
   }
 
   &__more-info {
-    padding-top: 30px;
-    font-size: 2rem;
+    margin-top: 70px;
+    padding: 10px;
+    font-size: $medium-font-size;
     letter-spacing: 1px;
     p {
-      padding-bottom: 30px;
+      padding-bottom: 10px;
+    }
+    @media screen and (min-width: map-get($breakpoints, tablets)) {
+      p {
+        display: inline-block;
+        padding: 0 $main-spacing * 2;
+      }
     }
   }
 }
