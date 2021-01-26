@@ -1,5 +1,8 @@
 import React from 'react'
+
 import { WeatherProps } from './WeatherDetails.types'
+
+import { getDate } from '../../../../utils/getDate';
 
 const WeatherDetails: React.FC<WeatherProps> = ({ country, city, desc, sunrise, sunset, temp, tempMax, tempMin }) => {
     const sunriseConverted = new Date(sunrise * 1000).toLocaleTimeString();
@@ -10,14 +13,23 @@ const WeatherDetails: React.FC<WeatherProps> = ({ country, city, desc, sunrise, 
 
     return (
         <div className='weather-page__details'>
-            <p className="weather-page__item">{city}</p>
-            <p className="weather-page__item">{`Wschód słońca: ${sunriseConverted}`}</p>
-            <p className="weather-page__item">{`Zachód słońca: ${sunsetConverted}`}</p>
-            <p className="weather-page__item">{tempConverted} <em>&#176;C</em></p>
-            <p className="weather-page__item">{country}</p>
-            <p className="weather-page__item">{desc}</p>
-            <p className="weather-page__item">{tempMaxConverted} <em>&#176;C</em></p>
-            <p className="weather-page__item">{tempMinConverted} <em>&#176;C</em></p>
+            <div className="weather-page__location">
+                <i className="weather-page__icon-location fas fa-map-marker-alt"></i>
+                <p className="weather-page__city">{city}, {country}</p>
+            </div>
+            <p className="weather-page__date">{getDate()}</p>
+            <p className="weather-page__main-desc">{desc}</p>
+            <p className="weather-page__main-temp">{tempConverted} &#176;C</p>
+            <div className="weather-page__temp">
+                <i className="weather-page__icon-temp-max fas fa-arrow-up"></i>
+                <p className="weather-page__temp-max">{tempMaxConverted} &#176;C</p>
+                <i className="weather-page__icon-temp-min fas fa-arrow-down"></i>
+                <p className="weather-page__temp-min">{tempMinConverted} &#176;C</p>
+            </div>
+            <div className="weather-page__more-info">
+                <p className="weather-page__sunrise">{`Sunrise: ${sunriseConverted}`}</p>
+                <p className="weather-page__sunset">{`Sunset: ${sunsetConverted}`}</p>
+            </div>
         </div>
     )
 }

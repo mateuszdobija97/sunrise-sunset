@@ -1,0 +1,75 @@
+.weather-page__details {
+  height: 90%;
+  max-height: 700px;
+  width: 50%;
+  max-width: 600px;
+  text-align: center;
+  background-image: linear-gradient(
+    darken($main-color, 5%),
+    lighten($main-color, 5%)
+  );
+  border-radius: 10px;
+  color: #fff;
+}
+
+.weather-page {
+  &__location {
+    padding: 30px 10px;
+    font-size: 2.5rem;
+    i {
+      padding-right: 10px;
+    }
+    p {
+      display: inline-block;
+    }
+  }
+
+  &__date {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fff;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  &__main-desc {
+    font-size: 3rem;
+    padding: 80px 10px 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 4px;
+  }
+
+  &__main-temp {
+    font-size: 8rem;
+    border: 1px solid white;
+    border-radius: 0 0 10px 10px;
+    border-top: none;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+  }
+
+  &__temp {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 2rem;
+    padding: 20px 10px 60px;
+    border-bottom: 1px solid #fff;
+    p {
+      display: inline-block;
+    }
+    i {
+      padding: 0 10px;
+    }
+  }
+
+  &__more-info {
+    padding-top: 30px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    p {
+      padding-bottom: 30px;
+    }
+  }
+}

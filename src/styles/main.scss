@@ -1,0 +1,12 @@
+// helpers
+@import "./helpers/variables";
+
+//basics
+@import "./basics/base";
+@import "./basics/reset";
+
+// components
+@import "../pages/WeatherPage/components/WeatherDetails/WeatherDetails.styles";
+
+// pages
+@import "../pages/WeatherPage/WeatherPage.styles";
